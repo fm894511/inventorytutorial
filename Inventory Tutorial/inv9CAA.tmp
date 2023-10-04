@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://3rc22y0ui8oe"]
+
+[ext_resource type="PackedScene" uid="uid://bm6nq5xhyycup" path="res://inventory_display.tscn" id="1_fekd0"]
+[ext_resource type="Script" path="res://inventory_container.gd" id="1_py03d"]
+
+[node name="InventoryContainer" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+script = ExtResource("1_py03d")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="InventoryDisplay" parent="CenterContainer" instance=ExtResource("1_fekd0")]
+layout_mode = 2
+mouse_filter = 2
